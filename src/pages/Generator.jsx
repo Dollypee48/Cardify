@@ -20,14 +20,14 @@ export default function Generator() {
     dob: "",
     bloodGroup: "",
     nationality: "",
-    address: "",
+    address: "", 
     role: "",
     company: "",
     website: "",
-    linkedin: "",
-    textColor: "#1F2937",
+    Twitter: "",
+    textColor: "#1F2937", 
     fontSize: "14px",
-    bgColor: "#ffffff",
+    bgColor: "#ffffff", 
   });
 
   return (
@@ -37,7 +37,7 @@ export default function Generator() {
           Cardify Generator
         </h2>
 
-        {/* Toggle Buttons */}
+       
         <div className="mb-8 flex justify-center gap-4">
           {["business", "id"].map((type) => (
             <button
@@ -54,24 +54,26 @@ export default function Generator() {
           ))}
         </div>
 
-        {/* Grid: Form & Preview Side-by-Side */}
+       
         <div className="grid md:grid-cols-2 gap-10 items-start">
-          {/* Left: Form */}
+         
           <CardForm
             formData={formData}
             setFormData={setFormData}
             cardType={cardType}
           />
 
-          {/* Right: Card Preview */}
-          <div className="w-full">
+          
+          <div className="w-full flex flex-col items-center">
             <div
               id="card-preview"
-              className="bg-white p-6 rounded-xl shadow-lg"
+              className="p-6 rounded-xl shadow-lg border transition-all duration-300 ease-in-out"
               style={{
                 backgroundColor: formData.bgColor,
                 color: formData.textColor,
                 fontSize: formData.fontSize,
+                width: cardType === "business" ? "400px" : "300px",
+                height: cardType === "business" ? "250px" : "auto",
               }}
             >
               {cardType === "business" ? (

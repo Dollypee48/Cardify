@@ -8,7 +8,7 @@ export default function BusinessCard({ data, textColor, textSize, backgroundColo
     email,
     phone,
     website,
-    linkedin,
+    Twitter,
     address,
     logo,
   } = data;
@@ -26,9 +26,9 @@ export default function BusinessCard({ data, textColor, textSize, backgroundColo
         <div className="mt-2 space-y-1 text-sm">
           {email && <p><strong>Email:</strong> {email}</p>}
           {phone && <p><strong>Phone:</strong> {phone}</p>}
-          {website && <p><strong>Website:</strong> {website}</p>}
-          {linkedin && <p><strong>LinkedIn:</strong> {linkedin}</p>}
           {address && <p><strong>Address:</strong> {address}</p>}
+          {Twitter && <p><strong>Twitter:</strong> {Twitter}</p>}
+          {website && <p><strong>Website:</strong> {website}</p>}
         </div>
       </div>
 

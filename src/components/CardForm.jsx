@@ -12,7 +12,7 @@ export default function CardForm({ formData, setFormData, cardType }) {
   return (
     <form className="bg-white p-6 rounded shadow">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Name */}
+       
         <div>
           <label className="block font-medium">Name</label>
           <input
@@ -23,7 +23,7 @@ export default function CardForm({ formData, setFormData, cardType }) {
           />
         </div>
 
-        {/* Conditional Fields */}
+        
         {cardType === "business" && (
           <>
             <div>
@@ -144,7 +144,7 @@ export default function CardForm({ formData, setFormData, cardType }) {
           </>
         )}
 
-        {/* Common Fields */}
+      
         <div>
           <label className="block font-medium">Email</label>
           <input
@@ -173,16 +173,16 @@ export default function CardForm({ formData, setFormData, cardType }) {
           />
         </div>
         <div>
-          <label className="block font-medium">LinkedIn</label>
+          <label className="block font-medium">Twitter</label>
           <input
-            name="linkedin"
-            value={formData.linkedin}
+            name="Twitter"
+            value={formData.Twitter}
             onChange={handleChange}
             className="w-full border p-2 rounded"
           />
         </div>
 
-        {/* Styling Controls */}
+       
         <div>
           <label className="block font-medium">Text Color</label>
           <input
@@ -193,20 +193,7 @@ export default function CardForm({ formData, setFormData, cardType }) {
             className="w-16 h-10 p-0 border rounded"
           />
         </div>
-        <div>
-          <label className="block font-medium">Font Size</label>
-          <select
-            name="fontSize"
-            value={formData.fontSize}
-            onChange={handleChange}
-            className="w-full border p-2 rounded"
-          >
-            <option value="text-sm">Small</option>
-            <option value="text-base">Normal</option>
-            <option value="text-lg">Large</option>
-            <option value="text-xl">Extra Large</option>
-          </select>
-        </div>
+       
         <div>
           <label className="block font-medium">Background Color</label>
           <input
