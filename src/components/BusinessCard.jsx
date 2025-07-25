@@ -28,7 +28,7 @@ export default function BusinessCard({ data, textColor, textSize, backgroundColo
           {phone && <p><strong>Phone:</strong> {phone}</p>}
           {address && <p><strong>Address:</strong> {address}</p>}
           {Twitter && <p><strong>Twitter:</strong> {Twitter}</p>}
-          {website && <p><strong>Website:</strong> {website}</p>}
+          
         </div>
       </div>
 

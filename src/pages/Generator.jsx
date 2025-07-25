@@ -20,24 +20,24 @@ export default function Generator() {
     dob: "",
     bloodGroup: "",
     nationality: "",
-    address: "", 
+    address: "",
     role: "",
     company: "",
     website: "",
     Twitter: "",
     textColor: "#1F2937", 
     fontSize: "14px",
-    bgColor: "#ffffff", 
+    bgColor: "#ffffff",
   });
 
   return (
-    <div className="min-h-screen p-6 bg-gradient-to-r from-slate-100 to-blue-100">
+    <div className="min-h-screen p-6 bg-gray-200 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800">
+        <h2 className="text-3xl font-bold mb-8 text-center text-white">
           Cardify Generator
         </h2>
 
-       
+        
         <div className="mb-8 flex justify-center gap-4">
           {["business", "id"].map((type) => (
             <button
@@ -56,15 +56,13 @@ export default function Generator() {
 
        
         <div className="grid md:grid-cols-2 gap-10 items-start">
-         
           <CardForm
             formData={formData}
             setFormData={setFormData}
             cardType={cardType}
           />
 
-          
-          <div className="w-full flex flex-col items-center">
+          <div className="w-full flex flex-col items-center ">
             <div
               id="card-preview"
               className="p-6 rounded-xl shadow-lg border transition-all duration-300 ease-in-out"
@@ -72,8 +70,8 @@ export default function Generator() {
                 backgroundColor: formData.bgColor,
                 color: formData.textColor,
                 fontSize: formData.fontSize,
-                width: cardType === "business" ? "400px" : "300px",
-                height: cardType === "business" ? "250px" : "auto",
+                width: cardType === "business" ? "400px" : "350px",
+                height: cardType === "business" ? "270px" : "auto",
               }}
             >
               {cardType === "business" ? (
