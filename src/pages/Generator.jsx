@@ -70,8 +70,8 @@ export default function Generator() {
                 backgroundColor: formData.bgColor,
                 color: formData.textColor,
                 fontSize: formData.fontSize,
-                width: cardType === "business" ? "400px" : "350px",
-                height: cardType === "business" ? "270px" : "auto",
+                width: cardType === "business" ? "410px" : "350px",
+                height: cardType === "business" ? "290px" : "auto",
               }}
             >
               {cardType === "business" ? (
